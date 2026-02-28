@@ -9,7 +9,7 @@ body {
     color: white;
     transform: scale(1);
     filter: contrast(1);
-    transition: 0.5s;
+    transition: 0.5s ease;
 }
 
 body.is-high-contrast{
@@ -402,4 +402,5 @@ background-color: rgba(255, 255, 255, 0.233);
     height: calc(100% - 60px);
     width: 100%;
     overflow: scroll;
+    border-radius: 20px;
 }

@@ -1,12 +1,3 @@
-function invert() {
-    console.log("inverted")
-    if (document.body.style.filter === "invert(1)") {
-        document.body.style.filter = "invert(0)";
-    } else {
-        document.body.style.filter = "invert(1)";
-    }
-}
-
 function magnify() {
     if (document.body.style.transform === "scale(1.5)") {
         document.body.style.transform = "scale(1)";
@@ -22,6 +13,15 @@ function contrast() {
         document.body.style.filter = "contrast(1)";
     } else {
         document.body.style.filter = "contrast(4)";
+    }
+}
+
+function invert() {
+    console.log("inverted")
+    if (document.body.style.filter === "invert(1)") {
+        document.body.style.filter = "invert(0)";
+    } else {
+        document.body.style.filter = "invert(1)";
     }
 }
 
