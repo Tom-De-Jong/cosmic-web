@@ -15,6 +15,11 @@
 </head>
 
 <body>
+    <!-- LOGIN APPS -->
+
+    <div class="poweredOff">
+
+    </div>
 
     <div class="loginScreen">
         <div class="loginCard">
@@ -33,7 +38,13 @@
 
                 <div class="flex mtop">
 
-                    <div class="bottomItem">
+                    <div class="bottomItem relative">
+                        <select class="selectBox" name="" id="">
+                            <option onclick="screenreader()" value="screen-reader">Screen reader</option>
+                            <option onclick="magnify()" value="magnifier">Magnifier</option>
+                            <option onclick="contrast()" value="high-contrast">High contrast</option>
+                            <option onclick="invert()" value="inverted-colors">Inverted colors</option>
+                        </select>
                         <img class="icons" src="icons/accessibility.png" alt="">
                     </div>
 
@@ -42,23 +53,30 @@
                         <p style="cursor: default;">US</p>
                     </div>
 
-                    <div class="bottomItem">
+                    <div class="bottomItem relative">
+                        <select class="selectBox" name="" id="">
+                            <option value="Tom-de-Jong">Tom de Jong</option>
+                            <option value="meowzer">Meowzer</option>
+                        </select>
                         <img class="icons" src="icons/users.png" alt="">
                     </div>
 
-                    <div class="bottomItem">
+                    <div class="bottomItem relative">
+                        <select class="selectBox" name="" id="">
+                            <option value="cosmic">COSMIC</option>
+                        </select>
                         <img class="icons" src="icons/settings.png" alt="">
                     </div>
 
-                    <div class="bottomItem">
+                    <div class="bottomItem" onclick="turnOff()">
                         <img class="icons" src="icons/moon.png" alt="">
                     </div>
 
-                    <div class="bottomItem">
+                    <div class="bottomItem" onclick="location.reload();">
                         <img class="icons" src="icons/roundarrow.png" alt="">
                     </div>
 
-                    <div class="bottomItem">
+                    <div class="bottomItem" onclick="turnOff()">
                         <img class="icons" src="icons/power.png" alt="">
                     </div>
 
@@ -74,20 +92,45 @@
                 <div class="flexrow">
 
                     <input class="passwordInput" type="password" placeholder="enter password">
-                    <div class="bottomItem mleft"><img class="icons" src="icons/arrow.png" alt=""></div>
+                    <div class="bottomItem mleft" onclick="login()"><img class="icons" src="icons/arrow.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+
+
+
     <div class="desktop">
 
         <nav class="navBar">
+            <div class="leftWidget flex">
+                <p class="vDesktopNumselectec">1</p>
+                <p class="vDesktopNum">2</p>
+            </div>
 
+            <div class="centerWidget">
+                <p class="timeCenter">time</p>
+            </div>
+
+            <div class="rightWidget">
+
+            </div>
         </nav>
+
+        <div class="center">
+
+            <footer class="taskBar">
+
+            </footer>
+
+        </div>
 
     </div>
 </body>
+<script src="stylechanges.js" defer></script>
 <script src="date.js" defer></script>
+<script src="main.js" defer></script>
 
 </html>

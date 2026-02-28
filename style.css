@@ -1,15 +1,24 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-font-family: "Open Sans", sans-serif;
-color: white;
+body {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    transform: scale(1);
+    filter: contrast(1);
+    transition: 0.5s;
 }
 
-.loginScreen{
+body.is-high-contrast{
+    filter: contrast(2);
+}
+
+.loginScreen {
+    overflow: hidden;
+    position: fixed;
     width: 100%;
     height: 100vh;
 
@@ -23,7 +32,7 @@ color: white;
     align-items: center;
 }
 
-.loginCard{
+.loginCard {
     width: 800px;
     height: 300px;
     background-color: rgb(34, 34, 37);
@@ -33,24 +42,43 @@ color: white;
     gap: 50px;
 }
 
-.splitdiv{
+.swipeDown{
+    animation: swipeDown;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: forwards;
+    position: static;
+}
+
+@keyframes swipeDown {
+    from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(-0px, 70vh);
+    }
+    
+}
+
+.splitdiv {
     width: 50%;
     /* outline: green dotted 2px; */
 }
 
-.dateShow{
-font-size: 30px;
-color: rgb(76, 204, 255);
-font-weight: 500;
+.dateShow {
+    font-size: 30px;
+    color: rgb(76, 204, 255);
+    font-weight: 500;
 }
 
-.timeShow{
-font-size: 80px;
-color: rgb(76, 204, 255);
-font-weight: 500;
+.timeShow {
+    font-size: 80px;
+    color: rgb(76, 204, 255);
+    font-weight: 500;
 }
 
-.line{
+.line {
     background-color: rgba(255, 255, 255, 0.103);
     height: 2px;
     border-radius: 10px;
@@ -58,28 +86,28 @@ font-weight: 500;
 
 }
 
-.flex{
+.flex {
     display: flex;
     align-items: center;
 }
 
-.loginIcon{
+.loginIcon {
     height: 30px;
 }
 
-.batteryPercentage{
+.batteryPercentage {
     margin-left: 5px;
     color: rgb(76, 204, 255);
     transform: translateY(-1px);
 }
 
-.wifi{
+.wifi {
     margin-left: 10px;
     height: 50px;
     transform: translateY(-11px);
 }
 
-.bottomItem{
+.bottomItem {
     border-radius: 1000px;
     height: 40px;
     width: 40px;
@@ -92,36 +120,34 @@ font-weight: 500;
     transition: 0.4s ease;
 }
 
-.bottomItem:hover{
+.bottomItem:hover {
     background-color: rgba(255, 255, 255, 0.233);
 }
 
-.longer{
-width: 65px;
+.longer {
+    width: 65px;
 }
 
-.icons{
-height: 20px;
+.icons {
+    height: 20px;
 }
 
-.longer{
+.longer {}
 
-}
-
-.mtop{
+.mtop {
     margin-top: 10px;
 }
 
 /* SPLITDIV RIGHT NOW */
 
-.right{
+.right {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.profilePictureHolder{
+.profilePictureHolder {
     width: 100px;
     height: 100px;
     border: solid 1.5px rgb(76, 204, 255);
@@ -129,7 +155,7 @@ height: 20px;
     padding: 2px;
 }
 
-.profilePicture{
+.profilePicture {
     background-image: url(img/profile.jpg);
     background-position: center;
     background-size: cover;
@@ -138,13 +164,13 @@ height: 20px;
     border-radius: 1000px;
 }
 
-.username{
+.username {
     font-size: 25px;
     font-weight: 600;
     margin: 5px;
 }
 
-.passwordInput{
+.passwordInput {
     width: 240px;
     height: 40px;
     background-color: inherit;
@@ -159,20 +185,43 @@ height: 20px;
     background-position: 10px, 10px;
 }
 
-.passwordInput:focus{
-outline: none;
+.passwordInput:focus {
+    outline: none;
 }
 
-.flexrow{
+.flexrow {
     display: flex;
     flex-direction: row;
     transform: translateX(30px);
 }
 
-.mleft{
+.mleft {
     margin-left: 10px;
 }
 
+.poweredOff {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: 100;
+    display: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.selectBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    background-color: rgb(34, 34, 37);
+}
 
 
 
@@ -196,14 +245,64 @@ outline: none;
 
 
 
-.desktop{
+
+.desktop {
     display: none;
     width: 100%;
     height: 100vh;
+    background-image: url(img/cosmicBG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.navBar{
+.navBar {
     height: 30px;
     width: 100%;
     background-color: rgb(34, 34, 37);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.vDesktopNumselectec{
+ background-color: rgb(95, 174, 206);
+ color: rgb(34, 34, 37);
+ padding: 5px;
+ width: 40px;
+ margin-left: 5px;
+ text-align: center;
+ border-radius: 20px;
+ font-weight: 700;
+ font-size: 15px;
+}
+
+.vDesktopNum{
+ color: rgb(255, 255, 255);
+ padding: 5px;
+ width: 40px;
+ margin-left: 5px;
+ text-align: center;
+ border-radius: 20px;
+ font-weight: 700;
+ font-size: 15px;
+}
+
+.center{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.taskBar{
+    height: 80px;
+    width: 500px;
+    background-color: rgb(34, 34, 37);
+    border-radius: 1000px;
+    margin-bottom: 5px;
 }
