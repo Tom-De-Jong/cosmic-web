@@ -8,9 +8,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" data-name="vs/editor/editor.main" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/editor/editor.main.min.css">
+      
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -104,6 +106,41 @@
 
     <div class="desktop">
 
+        <div class="app">
+            <nav class="appNav">
+                <div class="iconsLeft flex">
+                    <img src="" alt="">
+                    <p class="appNavText">File</p>
+                    <p class="appNavText" >Edit</p>
+                    <p class="appNavText" >View</p>
+                </div>
+
+                <div class="iconsRight flex">
+                    <img class="sysicon" src="sysicons/minimize.png" alt="">
+                    <img class="sysicon" src="sysicons/resize.png" alt="">
+                    <img class="sysicon" src="sysicons/close.png" alt="">
+                </div>
+            </nav>
+
+            <div id="editor-container"></div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
+    
+    <script>
+        require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs' }});
+
+        require(['vs/editor/editor.main'], function() {
+            var editor = monaco.editor.create(document.getElementById('editor-container'), {
+                value: "function hello() {\n\tconsole.log('Hello world!');\n}",
+                language: 'javascript',
+                theme: 'vs-dark', // Options: 'vs', 'vs-dark', 'hc-black'
+                automaticLayout: true // Resizes if the container changes
+            });
+        });
+    </script>
+            
+        </div>
+
         <nav class="navBar">
             <div class="leftWidget flex">
                 <p class="vDesktopNumselectec">1</p>
@@ -115,14 +152,22 @@
             </div>
 
             <div class="rightWidget">
-
+                <img class="navWidgets" src="icons/keyboardlayout.png" alt="">
+                <img class="navWidgets" src="icons/accessibility.png" alt="">
+                <img class="navWidgets" src="icons/moon.png" alt="">
+                <img class="navWidgets" src="icons/roundarrow.png" alt="">
+                <img class="navWidgets" src="icons/power.png" alt="">
             </div>
         </nav>
 
         <div class="center">
 
             <footer class="taskBar">
-
+                <img src="appicons/firefox.webp" alt="" class="appImage">
+                <img src="appicons/texteditor.png" alt="" class="appImage">
+                <img src="appicons/terminal.png" alt="" class="appImage">
+                <img src="appicons/store.png" alt="" class="appImage">
+                <img src="appicons/settings.png" alt="" class="appImage">
             </footer>
 
         </div>
