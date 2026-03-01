@@ -16,3 +16,13 @@ function openTerminal() {
         , 500)
 }
 
+function openStore() {
+    document.querySelector("#store").className = "app appanim"
+    document.querySelector("#store").style.display = "block";
+
+    setTimeout(() =>
+        document.querySelector("#store").className = "app"
+        , 500)
+}
+
+

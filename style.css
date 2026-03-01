@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -12,7 +13,7 @@ body {
     transition: 0.5s ease;
 }
 
-body.is-high-contrast{
+body.is-high-contrast {
     filter: contrast(2);
 }
 
@@ -42,7 +43,7 @@ body.is-high-contrast{
     gap: 50px;
 }
 
-.swipeDown{
+.swipeDown {
     animation: swipeDown;
     animation-duration: 0.5s;
     animation-timing-function: ease;
@@ -55,10 +56,11 @@ body.is-high-contrast{
     from {
         transform: translate(0px, 0px);
     }
+
     to {
         transform: translate(-0px, 70vh);
     }
-    
+
 }
 
 .splitdiv {
@@ -131,8 +133,6 @@ body.is-high-contrast{
 .icons {
     height: 20px;
 }
-
-.longer {}
 
 .mtop {
     margin-top: 10px;
@@ -225,7 +225,7 @@ body.is-high-contrast{
 
 /* DESKTOP */
 
-p{
+p {
     cursor: default;
 }
 
@@ -249,45 +249,45 @@ p{
     align-items: center;
 }
 
-.navWidgets{
+.navWidgets {
     height: 20px;
     margin-right: 10px;
     border-radius: 1000px;
     transition: 0.4s ease;
 }
 
-.navWidgets:hover{
-background-color: rgba(255, 255, 255, 0.233);
+.navWidgets:hover {
+    background-color: rgba(255, 255, 255, 0.233);
 }
 
-.vDesktopNumselectec{
- background-color: rgb(95, 174, 206);
- color: rgb(34, 34, 37);
- padding: 5px;
- width: 40px;
- margin-left: 5px;
- text-align: center;
- border-radius: 20px;
- font-weight: 700;
- font-size: 15px;
+.vDesktopNumselectec {
+    background-color: rgb(95, 174, 206);
+    color: rgb(34, 34, 37);
+    padding: 5px;
+    width: 40px;
+    margin-left: 5px;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 15px;
 }
 
-.vDesktopNum{
- color: rgb(255, 255, 255);
- padding: 5px;
- width: 40px;
- margin-left: 5px;
- text-align: center;
- border-radius: 20px;
- font-weight: 700;
- font-size: 15px;
+.vDesktopNum {
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    width: 40px;
+    margin-left: 5px;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 15px;
 }
 
-.centerWidget{
+.centerWidget {
     margin-left: 60px;
 }
 
-.center{
+.center {
     position: absolute;
     bottom: 0;
     display: flex;
@@ -296,7 +296,7 @@ background-color: rgba(255, 255, 255, 0.233);
     width: 100%;
 }
 
-.taskBar{
+.taskBar {
     height: 80px;
     background-color: rgb(34, 34, 37);
     border-radius: 1000px;
@@ -306,21 +306,22 @@ background-color: rgba(255, 255, 255, 0.233);
     padding-left: 20px;
     padding-right: 20px;
     gap: 20px;
+    z-index: 200;
 }
 
-.appImage{
+.appImage {
     height: 50px;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 0px;
     transition: 0.4s ease;
 }
 
-.appImage:hover{
+.appImage:hover {
     background-color: rgba(255, 255, 255, 0.233);
     border-radius: 20px;
 }
 
-.slideUp{
+.slideUp {
     animation: slideUp;
     animation-duration: 0.5s;
     animation-timing-function: ease;
@@ -332,16 +333,16 @@ background-color: rgba(255, 255, 255, 0.233);
 
 
 @keyframes slideUp {
-    from{
+    from {
         transform: translate(0px, 100px);
     }
 
-    to{
+    to {
         transform: translate(0px, 0px);
     }
 }
 
-.slideDown{
+.slideDown {
     animation: slideDown;
     animation-duration: 0.5s;
     animation-timing-function: ease;
@@ -353,11 +354,11 @@ background-color: rgba(255, 255, 255, 0.233);
 
 
 @keyframes slideDown {
-    from{
+    from {
         transform: translate(0px, -100px);
     }
 
-    to{
+    to {
         transform: translate(0px, 0px);
     }
 }
@@ -390,54 +391,54 @@ background-color: rgba(255, 255, 255, 0.233);
 }
 
 .app.minimized {
-display: none !important;
+    display: none !important;
 }
 
 .app.minimized #editor-container {
     display: none;
 }
 
-.appNav{
+.appNav {
     height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.appNavText{
+.appNavText {
     margin-left: 15px;
     color: rgb(76, 204, 255);
     font-weight: 500;
 }
 
-.sysicon{
+.sysicon {
     height: 20px;
     margin-right: 20px;
     transition: 0.4s ease;
     border-radius: 100px;
 }
 
-.sysicon:hover{
-background-color: rgba(255, 255, 255, 0.233);
+.sysicon:hover {
+    background-color: rgba(255, 255, 255, 0.233);
 }
 
-#editor-container{
+#editor-container {
     height: calc(100% - 60px);
     width: 100%;
     overflow: scroll;
     border-radius: 20px;
 }
 
-#textEditor{
+#textEditor {
     display: none;
     z-index: 100;
 }
 
-#terminal{
+#terminal {
     display: none;
 }
 
-.appanim{
+.appanim {
     animation: appAnim;
     animation-duration: 0.2s;
     animation-timing-function: ease;
@@ -446,17 +447,18 @@ background-color: rgba(255, 255, 255, 0.233);
 }
 
 @keyframes appAnim {
-    from{
+    from {
         opacity: 0;
         transform: scale(0.9);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: scale(1);
     }
 }
 
-.term-container{
+.term-container {
     height: calc(100% - 60px);
     padding: 5px;
     width: 100%;
@@ -464,7 +466,7 @@ background-color: rgba(255, 255, 255, 0.233);
     border-radius: 0px;
 }
 
-.terminalInput{
+.terminalInput {
     outline: none;
     border: none;
     background-color: inherit;
@@ -472,3 +474,85 @@ background-color: rgba(255, 255, 255, 0.233);
     font-size: 18px;
     height: 22px;
 }
+
+#store{
+display: none;
+}
+
+.store-container {
+    height: calc(100% - 60px);
+    padding: 10px;
+    width: 100%;
+    border-radius: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.exploreDiv {
+    width: 40%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.096);
+    border-radius: 10px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+.exploreItem {
+    margin-top: 10px;
+    height: 50px;
+    width: 95%;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.4s ease;
+}
+
+.exploreItem:hover{
+    background-color: rgba(255, 255, 255, 0.096);
+}
+
+.exploreselected{
+    background-color: rgba(255, 255, 255, 0.096);
+}
+
+.storeIcon{
+    margin-right: 10px;
+    height: 20px;
+}
+
+.availableApps{
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+.appItem{
+    width: 95%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.appItemImage{
+    height: 60%;
+}
+
+.flexcol{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.b

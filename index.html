@@ -144,7 +144,7 @@
                     editor.onDidChangeModelContent(() => {
                         const code = editor.getValue();
 
-                    
+
                         if (code.length > 10) {
                             const result = hljs.highlightAuto(code);
                             const detectedLang = result.language;
@@ -171,8 +171,8 @@
         </div>
 
         <!-- term app -->
- 
-         <div class="app" id="terminal">
+
+        <div class="app" id="terminal">
             <nav class="appNav">
                 <div class="iconsLeft flex">
                     <img src="" alt="">
@@ -193,7 +193,180 @@
             </div>
         </div>
 
-            
+        <div class="app" id="store">
+            <nav class="appNav">
+                <div class="iconsLeft flex">
+                    <img src="" alt="">
+                    <p class="appNavText">File</p>
+                    <p class="appNavText">Edit</p>
+                    <p class="appNavText">View</p>
+                </div>
+
+                <div class="iconsRight flex">
+                    <img class="sysicon minimize" src="sysicons/minimize.png" alt="">
+                    <img class="sysicon maximize" src="sysicons/resize.png" alt="">
+                    <img class="sysicon minimize" src="sysicons/close.png" alt="">
+                </div>
+            </nav>
+
+            <div id="editor-container" class="store-container">
+                <div class="exploreDiv">
+                    <div class="exploreItem exploreselected">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/compass-bold.svg?color=white" alt="">
+                        <p>Explore</p>
+                    </div>
+                    <div class="exploreItem">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/paint-brush-bold.svg?color=white"
+                            alt="">
+                        <p>Create</p>
+                    </div>
+                    <div class="exploreItem">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/briefcase-bold.svg?color=white"
+                            alt="">
+                        <p>Work</p>
+                    </div>
+                    <div class="exploreItem">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/code-bold.svg?color=white" alt="">
+                        <p>Develop</p>
+                    </div>
+                    <div class="exploreItem">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/book-open-bold.svg?color=white"
+                            alt="">
+                        <p>Learn</p>
+                    </div>
+                    <div class="exploreItem">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/game-controller-bold.svg?color=white"
+                            alt="">
+                        <p>Game</p>
+                    </div>
+                    <div class="exploreItem">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/coffee-bold.svg?color=white" alt="">
+                        <p>Relax</p>
+                    </div>
+                    <div class="exploreItem">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/chat-circle-dots-bold.svg?color=white"
+                            alt="">
+                        <p>Socialize</p>
+                    </div>
+                    <div class="exploreItem">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/wrench-bold.svg?color=white" alt="">
+                        <p>Utilities</p>
+                    </div>
+                    <div class="exploreItem">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/puzzle-piece-bold.svg?color=white"
+                            alt="">
+                        <p>Applets</p>
+                    </div>
+                    <div class="exploreItem">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/check-circle-bold.svg?color=white"
+                            alt="">
+                        <p>Installed apps</p>
+                    </div>
+                    <div class="exploreItem">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/arrow-circle-up-bold.svg?color=white"
+                            alt="">
+                        <p>Updates</p>
+                    </div>
+                </div>
+                <div class="availableApps">
+
+                    <div class="appItem">
+                        <img class="appItemImage"
+                            src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" alt="">
+                        <div class="flexcol">
+                            <p><strong>Slack</strong></p> <br>
+                            <p>Team communication and collaboration</p>
+                        </div>
+                    </div>
+
+                    <div class="appItem">
+                        <img class="appItemImage" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                            alt="">
+                        <div class="flexcol">
+                            <p><strong>WhatsApp</strong></p> <br>
+                            <p>Instant messaging and calls</p>
+                        </div>
+                    </div>
+
+                    <div class="appItem">
+                        <img class="appItemImage"
+                            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="">
+                        <div class="flexcol">
+                            <p><strong>Instagram</strong></p> <br>
+                            <p>Photo and video sharing</p>
+                        </div>
+                    </div>
+
+                    <div class="appItem">
+                        <img class="appItemImage"
+                            src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+                            alt="">
+                        <div class="flexcol">
+                            <p><strong>Facebook</strong></p> <br>
+                            <p>Social networking platform</p>
+                        </div>
+                    </div>
+
+                    <div class="appItem">
+                        <img class="appItemImage"
+                            src="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png" alt="">
+                        <div class="flexcol">
+                            <p><strong>X</strong></p> <br>
+                            <p>Microblogging and social updates</p>
+                        </div>
+                    </div>
+
+                    <div class="appItem">
+                        <img class="appItemImage"
+                            src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="">
+                        <div class="flexcol">
+                            <p><strong>Telegram</strong></p> <br>
+                            <p>Secure messaging and channels</p>
+                        </div>
+                    </div>
+
+                    <div class="appItem">
+                        <img class="appItemImage"
+                            src="https://upload.wikimedia.org/wikipedia/commons/7/75/Spotify_icon.png" alt="">
+                        <div class="flexcol">
+                            <p><strong>Spotify</strong></p> <br>
+                            <p>Music streaming service</p>
+                        </div>
+                    </div>
+
+                    <div class="appItem">
+                        <img class="appItemImage"
+                            src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="">
+                        <div class="flexcol">
+                            <p><strong>Apple Music</strong></p> <br>
+                            <p>Music streaming platform</p>
+                        </div>
+                    </div>
+
+
+                    <div class="appItem">
+                        <img class="appItemImage"
+                            src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="">
+                        <div class="flexcol">
+                            <p><strong>Gmail</strong></p> <br>
+                            <p>Email and inbox management</p>
+                        </div>
+                    </div>
+
+                    <div class="appItem">
+                        <img class="appItemImage"
+                            src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="">
+                        <div class="flexcol">
+                            <p><strong>Figma</strong></p> <br>
+                            <p>Collaborative interface design</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
 
         <!-- Here is normal desktop -->
 
@@ -221,8 +394,8 @@
             <footer class="taskBar">
                 <img src="appicons/firefox.webp" alt="" class="appImage" onclick="">
                 <img src="appicons/texteditor.png" alt="" class="appImage" onclick="openTexteditor()">
-                <img src="appicons/terminal.png" alt="" class="appImage"onclick="openTerminal()">
-                <img src="appicons/store.png" alt="" class="appImage">
+                <img src="appicons/terminal.png" alt="" class="appImage" onclick="openTerminal()">
+                <img src="appicons/store.png" alt="" class="appImage" onclick="openStore()">
                 <img src="appicons/settings.png" alt="" class="appImage">
             </footer>
 
@@ -237,4 +410,5 @@
 <script src="minmax.js" defer></script>
 <script src="openapps.js" defer></script>
 <script src="terminal.js" defer></script>
+
 </html>
