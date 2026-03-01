@@ -108,7 +108,7 @@
 
     <div class="desktop">
 
-        <div class="app">
+        <div class="app" id="textEditor">
             <nav class="appNav">
                 <div class="iconsLeft flex">
                     <img src="" alt="">
@@ -120,7 +120,7 @@
                 <div class="iconsRight flex">
                     <img class="sysicon minimize" src="sysicons/minimize.png" alt="">
                     <img class="sysicon maximize" src="sysicons/resize.png" alt="">
-                    <img class="sysicon close" src="sysicons/close.png" alt="">
+                    <img class="sysicon minimize" src="sysicons/close.png" alt="">
                 </div>
             </nav>
 
@@ -170,6 +170,33 @@
 
         </div>
 
+        <!-- term app -->
+ 
+         <div class="app" id="terminal"> <!-- temp this is normal texteditor-->
+            <nav class="appNav">
+                <div class="iconsLeft flex">
+                    <img src="" alt="">
+                    <p class="appNavText">File</p>
+                    <p class="appNavText">Edit</p>
+                    <p class="appNavText">View</p>
+                </div>
+
+                <div class="iconsRight flex">
+                    <img class="sysicon minimize" src="sysicons/minimize.png" alt="">
+                    <img class="sysicon maximize" src="sysicons/resize.png" alt="">
+                    <img class="sysicon minimize" src="sysicons/close.png" alt="">
+                </div>
+            </nav>
+
+            <div id="editor-container" class="term-container">
+                <span>[Tom-de-Jong@archlinux ~]$ </span><input class="terminalInput" type="text">
+            </div>
+        </div>
+
+            
+
+        <!-- Here is normal desktop -->
+
         <nav class="navBar">
             <div class="leftWidget flex">
                 <p class="vDesktopNumselectec">1</p>
@@ -192,9 +219,9 @@
         <div class="center">
 
             <footer class="taskBar">
-                <img src="appicons/firefox.webp" alt="" class="appImage">
-                <img src="appicons/texteditor.png" alt="" class="appImage">
-                <img src="appicons/terminal.png" alt="" class="appImage">
+                <img src="appicons/firefox.webp" alt="" class="appImage" onclick="">
+                <img src="appicons/texteditor.png" alt="" class="appImage" onclick="openTexteditor()">
+                <img src="appicons/terminal.png" alt="" class="appImage"onclick="openTerminal()">
                 <img src="appicons/store.png" alt="" class="appImage">
                 <img src="appicons/settings.png" alt="" class="appImage">
             </footer>
@@ -208,4 +235,6 @@
 <script src="main.js" defer></script>
 <script src="drag.js" defer></script>
 <script src="minmax.js" defer></script>
+<script src="openapps.js" defer></script>
+<script src="terminal.js" defer></script>
 </html>

@@ -1,17 +1,22 @@
-const myWindow = document.querySelector(".app");
-const myHeader = document.querySelector(".appNav");
+const apps = document.querySelectorAll(".app");
 
-dragElement(myWindow, myHeader);
+apps.forEach((app) => {
+    const header = app.querySelector(".appNav");
+
+    if (header) {
+        dragElement(app, header);
+    }
+});
 
 function dragElement(target, handle) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
     handle.onmousedown = dragMouseDown;
 
     function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
+        if (getComputedStyle(target).display === "none") return;
 
+        e.preventDefault();
         pos3 = e.clientX;
         pos4 = e.clientY;
 
@@ -20,9 +25,7 @@ function dragElement(target, handle) {
     }
 
     function elementDrag(e) {
-        e = e || window.event;
         e.preventDefault();
-
         pos1 = pos3 - e.clientX;
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
@@ -34,13 +37,8 @@ function dragElement(target, handle) {
         let maxLeft = window.innerWidth - target.offsetWidth;
         let maxTop = window.innerHeight - target.offsetHeight;
 
-        if (newTop < 0) newTop = 0;
-        if (newLeft < 0) newLeft = 0;
-        if (newTop > maxTop) newTop = maxTop;
-        if (newLeft > maxLeft) newLeft = maxLeft;
-
-        target.style.top = newTop + "px";
-        target.style.left = newLeft + "px";
+        target.style.top = Math.max(0, Math.min(newTop, maxTop)) + "px";
+        target.style.left = Math.max(0, Math.min(newLeft, maxLeft)) + "px";
     }
 
     function closeDragElement() {

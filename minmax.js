@@ -1,16 +1,20 @@
-const minBtn = document.querySelector(".minimize");
-const maxBtn = document.querySelector(".maximize");
+document.addEventListener("click", (e) => {
+    const btn = e.target;
+    const appWindow = btn.closest(".app");
 
-minBtn.onclick = () => {
-    myWindow.classList.toggle("minimized");
-    if (myWindow.classList.contains("minimized")) {
-        myWindow.classList.remove("maximized");
-    }
-};
+    if (!appWindow) return;
 
-maxBtn.onclick = () => {
-    myWindow.classList.toggle("maximized");
-    if (myWindow.classList.contains("maximized")) {
-        myWindow.classList.remove("minimized");
+    if (btn.classList.contains("minimize")) {
+        appWindow.classList.toggle("minimized");
+        if (appWindow.classList.contains("minimized")) {
+            appWindow.classList.remove("maximized");
+        }
     }
-};
+
+    if (btn.classList.contains("maximize")) {
+        appWindow.classList.toggle("maximized");
+        if (appWindow.classList.contains("maximized")) {
+            appWindow.classList.remove("minimized");
+        }
+    }
+});
