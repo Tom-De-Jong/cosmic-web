@@ -434,14 +434,6 @@
                         </div>
 
                         <div class="reccomendedsItem">
-                            <img class="reccomendedIMG" src="img/feelgoodinc.jpg" alt="">
-                            <div class="reccomendedContent">
-                                <p class="spotifyText">Feel good inc.</p>
-                                <p class="spotifyText authorName">Gorillaz</p>
-                            </div>
-                        </div>
-
-                        <div class="reccomendedsItem">
                             <img class="reccomendedIMG" src="img/currents.jpg" alt="">
                             <div class="reccomendedContent">
                                 <p class="spotifyText">Eventually</p>
@@ -461,10 +453,33 @@
                 </div>
 
                 <div class="rightBar">
+                    <img class="bigSongCover" src="img/yellow.jpg" alt="">
+                    <p class="spotifyText bigger">Yellow</p>
+                    <p class="spotifyText authorName">Coldplay</p>
+                    <p class="spotifyText smaller">Coldplay is a globally renowned British rock band formed in London in 1996, consisting of Chris Martin, Jonny Buckland, Guy Berryman, and Will Champion</p>
+                </div>
+            </div>
 
+            <div class="bottomSongBar">
+                <div class="bottomSongBarLeft">
+                    <img class="BottomSongCover" src="img/yellow.jpg" alt="">
+                    <div class="reccomendedContent">
+                        <p class="spotifyText">Yellow</p>
+                        <p class="spotifyText authorName">Coldplay</p>
+                    </div>
                 </div>
 
+                <div class="bottomSongBarMid">
+                    <img onclick="playSong()" class="playIcon" src="icons/play.png" alt="">
+                    <audio class="coolSong" src="songs/yellow-official-video.mp3" loop="true"></audio>
+                </div>
+
+                <div class="bottomSongBarRight">
+
+                </div>
             </div>
+
+
         </div>
 
 
@@ -497,7 +512,7 @@
                 <img src="appicons/texteditor.png" alt="" class="appImage" onclick="openTexteditor()">
                 <img src="appicons/terminal.png" alt="" class="appImage" onclick="openTerminal()">
                 <img src="appicons/store.png" alt="" class="appImage" onclick="openStore()">
-                <img src="appicons/settings.png" alt="" class="appImage">
+                <img src="appicons/Spotify.png" alt="" class="appImage" onclick="openSpotify()">
             </footer>
 
         </div>
@@ -511,5 +526,6 @@
 <script src="minmax.js" defer></script>
 <script src="openapps.js" defer></script>
 <script src="terminal.js" defer></script>
+<script src="playsong.js" defer></script>
 
 </html>

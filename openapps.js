@@ -25,4 +25,13 @@ function openStore() {
         , 500)
 }
 
+function openSpotify() {
+    document.querySelector("#spotify").className = "app appanim"
+    document.querySelector("#spotify").style.display = "block";
+
+    setTimeout(() =>
+        document.querySelector("#spotify").className = "app"
+        , 500)
+}
+
 
