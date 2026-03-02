@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 body {
@@ -475,8 +475,8 @@ p {
     height: 22px;
 }
 
-#store{
-display: none;
+#store {
+    display: none;
 }
 
 .store-container {
@@ -512,20 +512,20 @@ display: none;
     transition: 0.4s ease;
 }
 
-.exploreItem:hover{
+.exploreItem:hover {
     background-color: rgba(255, 255, 255, 0.096);
 }
 
-.exploreselected{
+.exploreselected {
     background-color: rgba(255, 255, 255, 0.096);
 }
 
-.storeIcon{
+.storeIcon {
     margin-right: 10px;
     height: 20px;
 }
 
-.availableApps{
+.availableApps {
     width: 58%;
     display: flex;
     flex-direction: column;
@@ -533,7 +533,7 @@ display: none;
     overflow: scroll;
 }
 
-.appItem{
+.appItem {
     width: 95%;
     height: 100px;
     background-color: rgba(255, 255, 255, 0.123);
@@ -545,14 +545,64 @@ display: none;
     margin-bottom: 20px;
 }
 
-.appItemImage{
+.appItemImage {
     height: 60%;
 }
 
-.flexcol{
+.flexcol {
     margin-left: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.b
+#terminal {
+    /* display: none; */
+}
+
+.spotify-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 15px;
+}
+
+.leftBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    gap: 10px;
+}
+
+.leftTop {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    width: 100%;
+    height: 20%;
+}
+
+.leftBottom {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    width: 100%;
+    height: 80%;
+}
+
+.midBar {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+}
+
+.rightBar {
+    width: 25%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+}
