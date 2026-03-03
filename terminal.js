@@ -16,8 +16,23 @@ document.querySelector(".term-container").addEventListener('keyup', function (e)
     if (value === "clear") {
         document.querySelectorAll(".terminalSpan").forEach(s => s.remove());
         input.remove();
+    } else if (value === "ls") {
+        currentSpan.innerHTML += "spacegame school personal-projects<br>";
+        input.remove();
+    } else if (value === "cd spacegame") {
+        currentSpan.innerHTML += "theres no game muhahahha you got tricked!<br>";
+        input.remove();
+    } else if (value === "cd school") {
+        currentSpan.innerHTML += "don't even bother looking here trust me its all boring stuff.<br>";
+        input.remove();
+    } else if (value === "personal-projects") {
+        currentSpan.innerHTML += "https://github.com/Tom-De-Jong<br>";
+        input.remove();
+    } else if (value.includes("sudo")) {
+        currentSpan.innerHTML += "Did you just try sudo? Goodluck lol<br>";
+        input.remove();
     } else if (value === "dih") {
-        currentSpan.innerHTML += "woah why?<br>";
+        currentSpan.innerHTML += "https://portfolio.rupnil.codes/<br>";
         input.remove();
     } else if (value !== "") {
         currentSpan.innerHTML += `command not found: ${value}<br>`;

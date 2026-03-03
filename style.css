@@ -204,7 +204,7 @@ body.is-high-contrast {
     width: 100%;
     position: absolute;
     background-color: black;
-    z-index: 100;
+    z-index: 990;
     display: none;
 }
 
@@ -759,4 +759,8 @@ p {
 .smaller{
     font-size: 15px;
     margin-top: 15px;
+}
+
+.rightWidget{
+    display: flex;
 }
