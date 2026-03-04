@@ -483,6 +483,45 @@
 
         </div>
 
+        <div class="app" id="firefox">
+            <nav class="appNav">
+                <div class="iconsLeft flex">
+                    <img src="" alt="">
+                    <p class="appNavText">File</p>
+                    <p class="appNavText">Edit</p>
+                    <p class="appNavText">View</p>
+                </div>
+
+                <div class="iconsRight flex">
+                    <img class="sysicon minimize" src="sysicons/minimize.png" alt="">
+                    <img class="sysicon maximize" src="sysicons/resize.png" alt="">
+                    <img class="sysicon minimize" src="sysicons/close.png" alt="">
+                </div>
+            </nav>
+
+            <div id="editor-container" class="firefox-container">
+                <div class="firefox">
+
+                    <div class="firefoxTopBar">
+
+                    
+                    <div class="fiefoxIcons">
+                        <img class="browserArrow" src="icons/browserArrow.png" alt="">
+                        <img class="browserArrow flipped" src="icons/browserArrow.png" alt="">
+                        <img class="reloadIcon" src="icons/roundarrow.png" alt="">
+                    </div>
+
+                    <div class="browserSearchBar">
+                        <input class="browserSearchInput" placeholder="https://youtube.com" type="text">
+                    </div>
+                    </div>
+
+                    <iframe class="browserIframe" src="https://tomwebsites.nl/index.html" frameborder="0"></iframe>
+
+                </div>
+            </div>
+        </div>
+
 
 
         <!-- Here is normal desktop -->
@@ -509,6 +548,7 @@
         <div class="center">
 
             <footer class="taskBar">
+                <img src="appicons/firefox.webp" alt="" class="appImage" onclick="openFirefox()">
                 <img src="appicons/texteditor.png" alt="" class="appImage" onclick="openTexteditor()">
                 <img src="appicons/terminal.png" alt="" class="appImage" onclick="openTerminal()">
                 <img src="appicons/store.png" alt="" class="appImage" onclick="openStore()">
@@ -527,5 +567,5 @@
 <script src="openapps.js" defer></script>
 <script src="terminal.js" defer></script>
 <script src="playsong.js" defer></script>
-
+<script src="browsersearch.js" defer></script>
 </html>

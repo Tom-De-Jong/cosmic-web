@@ -34,4 +34,13 @@ function openSpotify() {
         , 500)
 }
 
+function openFirefox() {
+    document.querySelector("#firefox").className = "app appanim"
+    document.querySelector("#firefox").style.display = "block";
+
+    setTimeout(() =>
+        document.querySelector("#firefox").className = "app"
+        , 500)
+}
+
 
