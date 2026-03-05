@@ -1,3 +1,5 @@
+# note! (file and edit buttons are not made to work nor window z indexing)
+
 # cosmic-web
 Cosmic-web is a webos based on the desktop enviroment [Coscmic](https://system76.com/cosmic) Created by [System 76](https://system76.com/). I got the idea to make this because i saw two sidequests. The space themed project and webos. So i decided to combine them and make this. Fun fact: I have never used popos nor cosmic so i had to get a virtual machine for some references which i couldn't find on the internet.
 
