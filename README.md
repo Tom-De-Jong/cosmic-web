@@ -9,7 +9,7 @@ This project is made using
 
 ## features
 
-The webos includes lots of features to explore and i will be listing them here!
+The webos includes lots of features to explore they are listed under this line (it starts at login screen)
 
 
 ## Login screen
