@@ -47,4 +47,5 @@ The store has only one page but mimics the ui of the real cosmic store with mult
 
 Spotify also only has one song which has the option to play and pause (the song loops). But also mimics the ui of some previous version where the ui wasnt as bad as it is now.
 
-Thanks for reading this and i hope you like my project! It is free to copy for any project or usage
+**Thanks for reading this and i hope you like my project! It is free to copy for any project or usage**
+I used ai for some things like helping with fixing minor bugs but 95% is done by me (and some code from the interwebs hehehe)
