@@ -25,7 +25,7 @@ document.querySelector(".term-container").addEventListener('keyup', function (e)
     } else if (value === "cd school") {
         currentSpan.innerHTML += "don't even bother looking here trust me its all boring stuff.<br>";
         input.remove();
-    } else if (value === "personal-projects") {
+    } else if (value === "cd personal-projects") {
         currentSpan.innerHTML += "https://github.com/Tom-De-Jong<br>";
         input.remove();
     } else if (value.includes("sudo")) {
@@ -33,6 +33,9 @@ document.querySelector(".term-container").addEventListener('keyup', function (e)
         input.remove();
     } else if (value === "dih") {
         currentSpan.innerHTML += "https://portfolio.rupnil.codes/<br>";
+        input.remove();
+    } else if (value === "help") {
+        currentSpan.innerHTML += "All commands: ls, cd, sudo, dih<br>";
         input.remove();
     } else if (value !== "") {
         currentSpan.innerHTML += `command not found: ${value}<br>`;

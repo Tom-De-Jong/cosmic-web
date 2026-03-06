@@ -112,9 +112,12 @@
             <nav class="appNav">
                 <div class="iconsLeft flex">
                     <img src="" alt="">
-                    <p class="appNavText">File</p>
-                    <p class="appNavText">Edit</p>
-                    <p class="appNavText">View</p>
+
+                    <input id="fileInput" type="file" style="display: none;">
+                    <label class="appNavText" for="fileInput">File</label>
+
+                    <p class="appNavText" onclick="alert('Just type in the text editor!!')">Edit</p>
+                    <p class="appNavText" onclick="alert('You can already see it right?')">View</p>
                 </div>
 
                 <div class="iconsRight flex">
@@ -134,10 +137,10 @@
                 require(['vs/editor/editor.main'], function () {
                     var container = document.getElementById('editor-container');
 
-                    var editor = monaco.editor.create(container, {
+                    window.editor = monaco.editor.create(container, {
                         value: "",
-                        language: 'plaintext',
-                        theme: 'vs-dark',
+                        language: "plaintext",
+                        theme: "vs-dark",
                         automaticLayout: true
                     });
 
@@ -176,9 +179,9 @@
             <nav class="appNav">
                 <div class="iconsLeft flex">
                     <img src="" alt="">
-                    <p class="appNavText">File</p>
-                    <p class="appNavText">Edit</p>
-                    <p class="appNavText">View</p>
+                    <p class="appNavText" onclick="alert('Do not try to open a file in the terminal :sob:')">File</p>
+                    <p class="appNavText" onclick="alert('im too lazy to add customization to the terminal!')">Edit</p>
+                    <p class="appNavText" onclick="alert('You can already see it!!')">View</p>
                 </div>
 
                 <div class="iconsRight flex">
@@ -197,9 +200,9 @@
             <nav class="appNav">
                 <div class="iconsLeft flex">
                     <img src="" alt="">
-                    <p class="appNavText">File</p>
-                    <p class="appNavText">Edit</p>
-                    <p class="appNavText">View</p>
+                    <p class="appNavText" onclick="alert('Why are you trying to add files to the store!?')">File</p>
+                    <p class="appNavText" onclick="alert('edit the store wowowoow im too lazy')">Edit</p>
+                    <p class="appNavText" onclick="alert('You can already see it!!')">View</p>
                 </div>
 
                 <div class="iconsRight flex">
@@ -370,9 +373,11 @@
             <nav class="appNav">
                 <div class="iconsLeft flex">
                     <img src="" alt="">
-                    <p class="appNavText">File</p>
-                    <p class="appNavText">Edit</p>
-                    <p class="appNavText">View</p>
+                    <p class="appNavText"
+                        onclick="alert('We are evil corps and you can only listen to OUR cloud hosted music!!!')">File
+                    </p>
+                    <p class="appNavText" onclick="alert('NO! You will not be editing spotify')">Edit</p>
+                    <p class="appNavText" onclick="alert('You can already see it!!')">View</p>
                 </div>
 
                 <div class="iconsRight flex">
@@ -487,9 +492,9 @@
             <nav class="appNav">
                 <div class="iconsLeft flex">
                     <img src="" alt="">
-                    <p class="appNavText">File</p>
-                    <p class="appNavText">Edit</p>
-                    <p class="appNavText">View</p>
+                    <p class="appNavText" onclick="alert('adding a file in firefox?')">File</p>
+                    <p class="appNavText" onclick="alert('too lazy for customization :p')">Edit</p>
+                    <p class="appNavText" onclick="alert('You can already see it!!')">View</p>
                 </div>
 
                 <div class="iconsRight flex">
@@ -504,16 +509,18 @@
 
                     <div class="firefoxTopBar">
 
-                    
-                    <div class="fiefoxIcons">
-                        <img class="browserArrow" src="icons/browserArrow.png" alt="">
-                        <img class="browserArrow flipped" src="icons/browserArrow.png" alt="">
-                        <img class="reloadIcon" src="icons/roundarrow.png" alt="">
-                    </div>
 
-                    <div class="browserSearchBar">
-                        <input class="browserSearchInput" placeholder="https://youtube.com" type="text">
-                    </div>
+                        <div class="fiefoxIcons">
+                            <img class="browserArrow" src="icons/browserArrow.png" alt="">
+                            <img class="browserArrow flipped" src="icons/browserArrow.png" alt="">
+                            <img class="reloadIcon" src="icons/roundarrow.png" alt="">
+                        </div>
+
+                        <div class="browserSearchBar">
+                            <input class="browserSearchInput"
+                                placeholder="https://youtube.com NOTE! Not all websites work because they have blocked iframes"
+                                type="text">
+                        </div>
                     </div>
 
                     <iframe class="browserIframe" src="https://tomwebsites.nl/index.html" frameborder="0"></iframe>
@@ -522,6 +529,45 @@
             </div>
         </div>
 
+        <div class="app" id="settings">
+            <nav class="appNav">
+                <div class="iconsLeft flex">
+                    <img src="" alt="">
+                    <p class="appNavText" onclick="alert('Why are you trying to add files to the store!?')">File</p>
+                    <p class="appNavText" onclick="alert('edit the store wowowoow im too lazy')">Edit</p>
+                    <p class="appNavText" onclick="alert('You can already see it!!')">View</p>
+                </div>
+
+                <div class="iconsRight flex">
+                    <img class="sysicon minimize" src="sysicons/minimize.png" alt="">
+                    <img class="sysicon maximize" src="sysicons/resize.png" alt="">
+                    <img class="sysicon minimize" src="sysicons/close.png" alt="">
+                </div>
+            </nav>
+
+            <div id="editor-container" class="store-container">
+                <div class="exploreDiv">
+                    
+                    <div class="exploreItem exploreselected">
+                        <img class="storeIcon" src="https://api.iconify.design/ph/compass-bold.svg?color=white" alt="">
+                        <p>Wallpaper</p>
+                    </div>
+
+                </div>
+                <div class="availableWallpapers">
+
+                    
+                    <img class="wallpaperChoice" src="wallpaper/1.png" id="1" alt="" onclick="changeWallpaper(this)">
+                    <img class="wallpaperChoice" src="wallpaper/2.png" id="2" alt="" onclick="changeWallpaper(this)">
+                    <img class="wallpaperChoice" src="wallpaper/3.png" id="3" alt="" onclick="changeWallpaper(this)">
+                    <img class="wallpaperChoice" src="wallpaper/4.png" id="4" alt="" onclick="changeWallpaper(this)">
+                    <img class="wallpaperChoice" src="wallpaper/5.png" id="5" alt="" onclick="changeWallpaper(this)">
+                    <img class="wallpaperChoice" src="wallpaper/6.png" id="6" alt="" onclick="changeWallpaper(this)">
+                    
+
+                </div>
+            </div>
+        </div>
 
 
         <!-- Here is normal desktop -->
@@ -553,6 +599,7 @@
                 <img src="appicons/terminal.png" alt="" class="appImage" onclick="openTerminal()">
                 <img src="appicons/store.png" alt="" class="appImage" onclick="openStore()">
                 <img src="appicons/Spotify.png" alt="" class="appImage" onclick="openSpotify()">
+                <img src="appicons/settings.png" alt="" class="appImage" onclick="openSettings()">
             </footer>
 
         </div>
@@ -568,4 +615,6 @@
 <script src="terminal.js" defer></script>
 <script src="playsong.js" defer></script>
 <script src="browsersearch.js" defer></script>
+<script src="upload.js" defer></script>
+<script src="wallpaper.js" defer></script>
 </html>

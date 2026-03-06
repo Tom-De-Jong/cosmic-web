@@ -5,8 +5,23 @@ apps.forEach((app) => {
 
     if (header) {
         dragElement(app, header);
+        zindex(app, header);
     }
 });
+
+    function zindex(app, header) {
+
+        header.addEventListener("click", () => {
+
+            apps.forEach((app) => {
+                app.style.zIndex = "50";
+            })
+
+            app.style.zIndex = "100";
+
+        })
+    }
+
 
 function dragElement(target, handle) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

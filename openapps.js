@@ -43,4 +43,13 @@ function openFirefox() {
         , 500)
 }
 
+function openSettings() {
+    document.querySelector("#settings").className = "app appanim"
+    document.querySelector("#settings").style.display = "block";
+
+    setTimeout(() =>
+        document.querySelector("#settings").className = "app"
+        , 500)
+}
+
 

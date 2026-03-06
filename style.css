@@ -829,3 +829,22 @@ p {
     width: 100%;
     height: 100%;
 }
+
+.availableWallpapers {
+    width: 58%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: scroll;
+    gap: 15px;
+}
+
+.wallpaperChoice{
+    width: 48%;
+    border-radius: 15px;
+    border: 4px solid rgb(76, 204, 255);
+}
+
+#settings {
+    display: none;
+}
