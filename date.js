@@ -1,19 +1,8 @@
 function updateClock() {
     const date = new Date();
-    
-    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-    let fullDate = `${weekdays[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}`;
-    
-    let hour = date.getHours().toString().padStart(2, '0');
-    let minute = date.getMinutes().toString().padStart(2, '0');
-    let fullTime = `${hour}:${minute}`;
-
-    document.querySelector(".dateShow").innerHTML = fullDate;
-    document.querySelector(".timeShow").innerHTML = fullTime;
-
-    document.querySelector(".timeCenter").innerHTML = fullTime;
+    document.querySelector(".dateShow").innerHTML = date.toLocaleDateString("en-EN", {weekday:"long", month:"long", day:"numeric"});
+    document.querySelector(".timeShow").innerHTML = date.toLocaleTimeString("en-EN", {timeStyle:"short", hour12:false});
+    document.querySelector(".timeCenter").innerHTML = date.toLocaleTimeString("en-EN", {timeStyle:"short", hour12:false});
 }
 
 updateClock(); 
