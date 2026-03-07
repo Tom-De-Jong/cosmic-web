@@ -46,7 +46,7 @@ document.querySelector(".term-container").addEventListener('keyup', function (e)
 
     const newSpan = document.createElement("span");
     newSpan.className = "terminalSpan";
-    newSpan.innerHTML = "[Tom-de-Jong@archlinux ~]$ ";
+    newSpan.innerHTML = `[${globalUsername}@archlinux ~]$ `;
     document.querySelector(".term-container").appendChild(newSpan);
 
     const newInput = document.createElement("input");
