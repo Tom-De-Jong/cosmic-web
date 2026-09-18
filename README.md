@@ -1,7 +1,7 @@
 # note! (file and edit buttons are not made to work nor window z indexing)
 
 # cosmic-web
-Cosmic-web is a webos based on the desktop enviroment [Coscmic](https://system76.com/cosmic) Created by [System 76](https://system76.com/). I got the idea to make this because i saw two sidequests. The space themed project and webos. So i decided to combine them and make this. Fun fact: I have never used popos nor cosmic so i had to get a virtual machine for some references which i couldn't find on the internet.
+Cosmic-web is a webos based on the desktop enviroment [Coscmic](https://system76.com/cosmic) Created by [System 76](https://system76.com/).
 
 ## tech stack
 This project is made using
@@ -42,8 +42,6 @@ Notepad uses the monaco editor also found in vscode, and it has automatic langua
 - Python
 - Javascript
 - C#
-
-The terminal has some secret commands and no help unless you are willing to go through the javascript code muhahaha.
 
 The store has only one page but mimics the ui of the real cosmic store with multiple different apps on display.
 
