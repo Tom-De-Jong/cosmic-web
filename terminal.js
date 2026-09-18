@@ -31,11 +31,8 @@ document.querySelector(".term-container").addEventListener('keyup', function (e)
     } else if (value.includes("sudo")) {
         currentSpan.innerHTML += "Did you just try sudo? Goodluck lol<br>";
         input.remove();
-    } else if (value === "dih") {
-        currentSpan.innerHTML += "https://portfolio.rupnil.codes/<br>";
-        input.remove();
     } else if (value === "help") {
-        currentSpan.innerHTML += "All commands: ls, cd, sudo, dih<br>";
+        currentSpan.innerHTML += "All commands: ls, cd, sudo<br>";
         input.remove();
     } else if (value !== "") {
         currentSpan.innerHTML += `command not found: ${value}<br>`;
